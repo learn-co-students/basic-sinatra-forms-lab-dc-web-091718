@@ -5,10 +5,12 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
 
+ <%@team.each do |position, name|%>
+    <%altered_position = position.to_s.split('_').map(&:capitalize).join(' ')%>
+    <%="#{altered_position}: #{name}"%>
+    <br>
+<%end%>
 
  </body>
 </html>
-
-
